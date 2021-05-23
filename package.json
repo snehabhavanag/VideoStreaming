@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "android": "react-native run-android",
+    "build-aar": "react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/build/intermediates/res/merged/release/ && rmdir android/app/src/main/res/drawable-* && rmdir android/app/src/main/res/raw/* && cd android && ./gradlew assembleRelease && cd .. && open android/app/build/outputs/aar",
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",

@@ -1,4 +1,4 @@
-apply plugin: "com.android.application"
+apply plugin: "com.android.library"
 
 import com.android.build.OutputFile
 
@@ -131,12 +131,13 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.playvideodemo"
+        
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
     }
+    
     splits {
         abi {
             reset()
@@ -167,7 +168,7 @@ android {
     }
 
     // applicationVariants are e.g. debug, release
-    applicationVariants.all { variant ->
+    libraryVariants.all { variant ->
         variant.outputs.each { output ->
             // For each separate APK per architecture, set a unique version code as described here:
             // https://developer.android.com/studio/build/configure-apk-splits.html

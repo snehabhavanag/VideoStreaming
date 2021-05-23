@@ -5,7 +5,7 @@ import Video from 'react-native-video';
 export default class App extends Component{
   state = {
     volume: 1,
-    paused: false,
+    paused: true,
   };
   render(){
     return(
